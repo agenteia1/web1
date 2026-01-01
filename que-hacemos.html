@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agentealta – Qué Hacemos</title>
+  <meta name="description" content="Automatizamos respuestas, agendamientos, cancelaciones y gestión de reservas con agentes de correo inteligentes personalizados.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1e40af;
+      --primary-light: #3b82f6;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --gray: #64748b;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fbfe;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+    }
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    nav {
+      background: white;
+      padding: 20px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--primary), var(--primary-light));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--primary-light);
+    }
+    .hero {
+      padding: 100px 0 60px;
+      text-align: center;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .section {
+      padding: 80px 0;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .service-card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border-top: 4px solid var(--primary-light);
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-card h3 {
+      font-size: 1.4rem;
+      margin: 15px 0;
+      color: var(--primary);
+    }
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: var(--gray);
+      font-size: 0.95rem;
+      background: var(--light);
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--primary), var(--primary-light));
+      color: white;
+      padding: 12px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: opacity 0.2s;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+    @media (max-width: 900px) {
+      .hero h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navegación -->
+  <nav>
+    <div class="container nav-content">
+      <div class="logo">Agentealta</div>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="que-hacemos.html">Qué hacemos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Qué hacemos</h1>
+      <p>Automatizamos la gestión de tu correo con agentes inteligentes personalizados para tu negocio.</p>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section class="section">
+    <div class="container">
+      <div class="services-grid">
+        <div class="service-card">
+          <div style="font-size: 2.5rem;">📧</div>
+          <h3>Respuestas automáticas personalizadas</h3>
+          <p>El agente responde como tú, con tu tono, estilo y conocimiento del negocio. Nada de mensajes genéricos.</p>
+        </div>
+        <div class="service-card">
+          <div style="font-size: 2.5rem;">📅</div>
+          <h3>Agendamiento inteligente</h3>
+          <p>Coordina disponibilidad en tiempo real, evita dobles reservas y sincroniza con tu calendario (Google, Outlook, etc.).</p>
+        </div>
+        <div class="service-card">
+          <div style="font-size: 2.5rem;">❌</div>
+          <h3>Gestión de cancelaciones</h3>
+          <p>Cancela, reprograma o confirma reservas automáticamente según tus reglas. Sin esfuerzo.</p>
+        </div>
+        <div class="service-card">
+          <div style="font-size: 2.5rem;">🔍</div>
+          <h3>Búsqueda de disponibilidad</h3>
+          <p>El agente consulta tu agenda y responde inmediatamente con opciones disponibles.</p>
+        </div>
+        <div class="service-card">
+          <div style="font-size: 2.5rem;">🛡️</div>
+          <h3>Seguridad y privacidad</h3>
+          <p>Tus correos y datos están protegidos con cifrado de extremo a extremo. Cumplimos con GDPR.</p>
+        </div>
+        <div class="service-card">
+          <div style="font-size: 2.5rem;">🧠</div>
+          <h3>Aprendizaje continuo</h3>
+          <p>El agente mejora con cada interacción, aprendiendo de tus respuestas y decisiones anteriores.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 50px;">
+        <p style="font-size: 1.1rem; margin-bottom: 20px;">¿Listo para automatizar tu correo?</p>
+        <a href="contacto.html" class="btn">Contáctanos hoy →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Agentealta — Automatización inteligente para empresas que valoran el tiempo.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

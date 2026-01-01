@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agentealta – Contacto</title>
+  <meta name="description" content="Envíanos la información de tu empresa y automatizaremos tu correo con un agente inteligente personalizado.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #1e40af;
+      --primary-light: #3b82f6;
+      --primary-dark: #1d4ed8;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --gray: #64748b;
+      --light-gray: #e2e8f0;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%);
+      color: var(--dark);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding-bottom: 60px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Navegación */
+    nav {
+      background: var(--white);
+      padding: 20px 0;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--primary), var(--primary-light));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+      font-size: 1.02rem;
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-light);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary-light);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 90px 0 50px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 16px;
+      background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--gray);
+      max-width: 700px;
+      margin: 0 auto;
+      font-weight: 400;
+    }
+
+    /* Main layout */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 900px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    /* Formulario */
+    .form-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 45px;
+      box-shadow: 0 12px 40px rgba(30, 64, 175, 0.08);
+      border: 1px solid var(--light-gray);
+    }
+
+    .form-card h2 {
+      font-size: 1.6rem;
+      margin-bottom: 24px;
+      color: var(--primary-dark);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    label {
+      font-weight: 600;
+      color: var(--dark);
+      font-size: 0.95rem;
+      display: block;
+    }
+
+    .required {
+      color: var(--primary);
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--light-gray);
+      border-radius: 12px;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.25s ease;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--primary-light);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    button {
+      background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 15px 28px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.3px;
+      box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(30, 64, 175, 0.35);
+      opacity: 0.98;
+    }
+
+    /* Info adicional */
+    .info-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .info-card h2 {
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+      color: var(--primary-dark);
+    }
+
+    .info-card p {
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+      color: var(--gray);
+    }
+
+    .benefits-list {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .benefits-list li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      gap: 12px;
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    .benefits-list li::before {
+      content: '✓';
+      background: var(--primary-light);
+      color: white;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 0 20px;
+      color: var(--gray);
+      font-size: 0.95rem;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .form-card {
+        padding: 30px 20px;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navegación -->
+  <nav>
+    <div class="container nav-content">
+      <div class="logo">Agentealta</div>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="que-hacemos.html">Qué hacemos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Contáctanos</h1>
+      <p>Envíanos los datos de tu empresa y crearemos un agente de correo inteligente a tu medida, listo para trabajar 24/7.</p>
+    </div>
+  </section>
+
+  <!-- Contenido principal -->
+  <div class="container">
+    <div class="contact-layout">
+      <!-- Formulario -->
+      <div class="form-card">
+        <h2>Envía tu información</h2>
+        <form id="contactForm" action="https://formspree.io/f/mwvkjrdo" method="POST">
+          <div>
+            <label for="companyName">Nombre de la empresa <span class="required">*</span></label>
+            <input type="text" id="companyName" name="empresa" required />
+          </div>
+
+          <div>
+            <label for="contactName">Nombre del contacto <span class="required">*</span></label>
+            <input type="text" id="contactName" name="contacto" required />
+          </div>
+
+          <div>
+            <label for="email">Correo electrónico <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div>
+            <label for="phone">Teléfono (opcional)</label>
+            <input type="tel" id="phone" name="telefono" />
+          </div>
+
+          <div>
+            <label for="industry">Sector de la empresa <span class="required">*</span></label>
+            <select id="industry" name="sector" required>
+              <option value="">Selecciona tu sector</option>
+              <option value="salud">Salud / Clínicas</option>
+              <option value="hotel">Hoteles / Turismo</option>
+              <option value="restaurantes">Restaurantes / Gastronomía</option>
+              <option value="educacion">Educación / Cursos</option>
+              <option value="legal">Legal / Asesoría</option>
+              <option value="belleza">Belleza / Spa</option>
+              <option value="servicios">Servicios profesionales</option>
+              <option value="otros">Otros</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message">¿Qué necesitas automatizar? <span class="required">*</span></label>
+            <textarea 
+              id="message" 
+              name="mensaje" 
+              placeholder="Ej: Quiero que mi agente responda a consultas de disponibilidad, agende citas, cancele reservas y envíe recordatorios."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit">Enviar solicitud →</button>
+        </form>
+      </div>
+
+      <!-- Información adicional -->
+      <div class="info-card">
+        <h2>¿Por qué contactarnos?</h2>
+        <p>En Agentealta, no vendemos bots genéricos. Creamos agentes de correo <strong>totalmente personalizados</strong> que entienden tu negocio y actúan como tú.</p>
+        <ul class="benefits-list">
+          <li>Respuesta en menos de 24 horas</li>
+          <li>Configuración sin tecnicismos</li>
+          <li>Integración con tu correo actual (Gmail, Outlook, etc.)</li>
+          <li>Soporte humano durante la implementación</li>
+          <li>Sin contrato de permanencia</li>
+        </ul>
+        <p>¿Tienes dudas? Explícanos tu caso y te diremos si somos la solución ideal para ti.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Agentealta — Automatización inteligente para empresas que valoran el tiempo.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      const email = document.getElementById('email').value;
+      if (!email || !email.includes('@')) {
+        e.preventDefault();
+        alert('Por favor, ingresa un correo electrónico válido.');
+      }
+    });
+  </script>
+
+</body>
+</html>
+
